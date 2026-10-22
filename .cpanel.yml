@@ -3,9 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/zactassonecom/public_html/
     - /bin/cp -f index.html 404.html robots.txt sitemap.xml .htaccess $DEPLOYPATH
-    - /bin/mkdir -p $DEPLOYPATH/assets $DEPLOYPATH/about $DEPLOYPATH/tips $DEPLOYPATH/speaking $DEPLOYPATH/contact
+    - /bin/mkdir -p $DEPLOYPATH/assets
     - /bin/cp -Rf assets/. $DEPLOYPATH/assets/
-    - /bin/cp -f about/index.html $DEPLOYPATH/about/
-    - /bin/cp -f tips/index.html $DEPLOYPATH/tips/
-    - /bin/cp -f speaking/index.html $DEPLOYPATH/speaking/
-    - /bin/cp -f contact/index.html $DEPLOYPATH/contact/
+    - /bin/rm -rf $DEPLOYPATH/about $DEPLOYPATH/tips $DEPLOYPATH/speaking $DEPLOYPATH/contact

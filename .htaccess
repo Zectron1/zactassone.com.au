@@ -16,6 +16,8 @@ RewriteRule ^ https://zactassone.com.au%{REQUEST_URI} [L,R=301]
 # Block hidden files and repo files
 RewriteRule (^|/)\.(?!well-known/) - [F]
 RewriteRule ^(README\.md|\.cpanel\.yml)$ - [F]
+# Old multi-page URLs now live as sections on the home page
+RewriteRule ^(about|tips|speaking|contact)/?$ /#$1 [R=301,NE,L]
 </IfModule>
 
 <IfModule mod_headers.c>

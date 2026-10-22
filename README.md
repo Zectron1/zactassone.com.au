@@ -3,7 +3,7 @@
 Personal brand website for Zac Tassone. Static HTML, CSS and JS, no build step required to deploy.
 
 ## Structure
-- `index.html`, `about/`, `tips/`, `speaking/`, `contact/`: pages
+- `index.html`: the whole site on one page (About, What I do, Zac the IT Guy, Speaking, Contact sections)
 - `assets/site.css`, `assets/site.js`: shared styles and scripts (mobile menu, scroll animations, HubSpot form)
 - `assets/og.png`: social share image
 - `.htaccess`: HTTPS redirect, security headers, caching
