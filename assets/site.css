@@ -160,6 +160,11 @@ nav a.active{color:#fff}
 .btn-book{background:#fff;color:#0B0D12}.btn-book:hover{background:#E6E8EC}
 .tip-watch{color:#fff;font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}
 .speak-photo{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:20px;border:1px solid #262B35;margin-top:8px;max-width:420px}
+.award-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:32px}
+@media (max-width:640px){.award-photos{grid-template-columns:1fr}}
+.award-photos figure{margin:0;border-radius:20px;overflow:hidden;border:1px solid #262B35;background:var(--card)}
+.award-photos img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.award-photos figcaption{padding:14px 18px;color:var(--dim);font-size:14px}
 .badge.photo{padding:0}
 .badge.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .badge.photo .tag{position:relative;margin:0;padding:56px 24px 20px;color:#E6E8EC;background:linear-gradient(to top,rgba(11,13,18,.92),rgba(11,13,18,0))}
