@@ -122,6 +122,14 @@ a.tip:hover{border-color:var(--accent);transform:translateY(-2px)}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.site-head header{transition:none}}
 .notfound{padding:120px 0}
+main section[id]{scroll-margin-top:84px}
+nav a.active{color:#fff}
+.tip-more{margin-top:auto}
+.tip-more summary{cursor:pointer;color:var(--soft);font-weight:600;font-size:15px;list-style:none;min-height:44px;display:flex;align-items:center}
+.tip-more summary::-webkit-details-marker{display:none}
+.tip-more[open] summary{color:#fff}
+.tip-more ul{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+.tip-more li{margin:6px 0}
 .social-row{justify-content:flex-start}
 .contact .wrap{align-items:flex-start}
 .contact .wrap>div:first-child{flex:1 1 420px;min-width:0}
