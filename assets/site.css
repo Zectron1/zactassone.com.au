@@ -130,6 +130,16 @@ nav a.active{color:#fff}
 .tip-more[open] summary{color:#fff}
 .tip-more ul{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
 .tip-more li{margin:6px 0}
+.badge.photo{padding:0}
+.badge.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.badge.photo .tag{position:relative;margin:0;padding:56px 24px 20px;color:#E6E8EC;background:linear-gradient(to top,rgba(11,13,18,.92),rgba(11,13,18,0))}
+.tips-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px;align-items:start}
+.tips-photo{margin:0;position:sticky;top:96px;border-radius:20px;overflow:hidden;border:1px solid #262B35;background:var(--card)}
+.tips-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.tips-photo figcaption{padding:16px 20px;color:var(--dim);font-size:15px}
+.tips-body .tip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:600px){.tips-body .tip-grid{grid-template-columns:1fr}}
+@media (max-width:900px){.tips-body{grid-template-columns:1fr}.tips-photo{position:static;max-width:420px}}
 .social-row{justify-content:flex-start}
 .contact .wrap{align-items:flex-start}
 .contact .wrap>div:first-child{flex:1 1 420px;min-width:0}
