@@ -15,6 +15,11 @@ if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion
  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
  els.forEach(function(el){io.observe(el)});
 }else{els.forEach(function(el){el.classList.add('in')})}
+var cs=document.querySelectorAll('[data-count]');
+if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+ var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,to=parseFloat(el.dataset.count),fr=parseFloat(el.dataset.from||0),dec=parseInt(el.dataset.dec||0),t0=null;
+  function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1200,1),v=fr+(to-fr)*(1-Math.pow(1-p,3));el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)})},{threshold:.6});
+ cs.forEach(function(el){co.observe(el)});}
 var forms=document.querySelectorAll('form[data-hs]');
 forms.forEach(function(f){
  var started=Date.now();
