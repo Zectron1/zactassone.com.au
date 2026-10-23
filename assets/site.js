@@ -38,7 +38,7 @@ forms.forEach(function(f){
    {objectTypeId:'0-1',name:'message',value:msg}],
    context:{pageUri:location.href,pageName:document.title}};
   fetch('https://api-ap1.hsforms.com/submissions/v3/integration/submit/443280882/89b36fc0-e3d5-421a-a1e0-f503abd51d28',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
-  .then(function(r){if(!r.ok)throw new Error(r.status);st.textContent="Thanks! Your message is on its way and I'll get back to you soon.";st.className='status ok';f.reset()})
+  .then(function(r){if(!r.ok)throw new Error(r.status);st.textContent="Thanks! Your message is on its way and I'll get back to you soon.";if(typeof window.gtag==='function')window.gtag('event','generate_lead',{form_name:'contact'});st.className='status ok';f.reset()})
   .catch(function(){st.innerHTML='Sorry, that didn’t send. Please email <a href="mailto:zac@zactassone.com.au">zac@zactassone.com.au</a>.';st.className='status err'})
   .finally(function(){b.disabled=false});
  });
