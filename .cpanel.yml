@@ -5,4 +5,6 @@ deployment:
     - /bin/cp -f index.html 404.html robots.txt sitemap.xml .htaccess $DEPLOYPATH
     - /bin/mkdir -p $DEPLOYPATH/assets
     - /bin/cp -Rf assets/. $DEPLOYPATH/assets/
-    - /bin/rm -rf $DEPLOYPATH/about $DEPLOYPATH/tips $DEPLOYPATH/speaking $DEPLOYPATH/contact
+    - /bin/rm -rf $DEPLOYPATH/about $DEPLOYPATH/speaking $DEPLOYPATH/contact
+    - /bin/mkdir -p $DEPLOYPATH/tips
+    - /bin/cp -Rf tips/. $DEPLOYPATH/tips/
